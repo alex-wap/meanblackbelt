@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app = 'app'>
+<head>
+	<meta charset="utf-8">
+	<!-- Angular from bower_components, otherwise find the CDN -->
+	<script src="angular/angular.js" charset="utf-8"></script>
+	<script src="angular-route/angular-route.js" charset="utf-8"></script>
+	<script src="angular-messages/angular-messages.js"></script>		
+	<!-- End Bower Components -->
+	<script src="assets/config/routes.js"></script>
+	<script src='assets/controllers/indexController.js'></script>	  
+	<script src='assets/controllers/newController.js'></script>	  
+	<script src='assets/controllers/playController.js'></script>	  
+	<script src='assets/factories/friendsFactory.js'></script>
+	<script src='assets/factories/questionsFactory.js'></script>
+</head>
+<body>
+	<div ng-view="">
+	</div>
+</body>
+</html>

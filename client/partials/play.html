@@ -1,0 +1,14 @@
+<title>Trivia Test</title>
+<p>Hi {{user}}!</p>
+<p>Choose an answer for each of the questions and submit the test once done. Good luck!</p><br>
+<p ng-if="errors">{{errors}}</p>
+<form ng-submit="submit_test()">
+	<div ng-repeat="question in questions track by $index">
+		<p>{{$index + 1}}. {{question.question}}</p>
+		<input type="radio" name="{{$index}}" ng-model="answers[$index]" value="{{question.correct_answer}}" required>{{question.correct_answer}}<br>
+		<input type="radio" name="{{$index}}" ng-model="answers[$index]" value="{{question.fake_answer1}}" required>{{question.fake_answer1}}<br>
+		<input type="radio" name="{{$index}}" ng-model="answers[$index]" value="{{question.fake_answer2}}" required>{{question.fake_answer2}}<br>
+	</div>
+	<a href="#/"><button>Cancel</button></a>
+	<input type="submit" value="Submit">
+</form>
