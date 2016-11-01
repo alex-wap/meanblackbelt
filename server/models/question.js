@@ -1,8 +1,10 @@
 var mongoose = require('mongoose');
 var QuestionSchema = new mongoose.Schema({
-	question: {type: String, required : true, minlength: 15},
-	correct_answer: {type: String, required : true},
-	fake_answer1: {type: String, required : true},
-	fake_answer2: {type: String, required : true},
+  user: {type: String},
+	question: {type: String, required : true, minlength: 8},
+	option1: {name:{type: String, required : true, minlength: 3},count:Number},
+	option2: {name:{type: String, required : true, minlength: 3},count:Number},
+	option3: {name:{type: String, required : true, minlength: 3},count:Number},
+  option4: {name:{type: String, required : true, minlength: 3},count:Number}
 }, {timestamps: true});
 var Question = mongoose.model('Question', QuestionSchema);

@@ -5,14 +5,18 @@ app.config(function ($routeProvider) {
 		templateUrl: 'partials/index.html',
 		controller: 'indexController'
 	})	
-	.when('/new_question',{
-		templateUrl: 'partials/new.html',
-		controller: 'newController'
+	.when('/dashboard',{
+		templateUrl: 'partials/dashboard.html',
+		controller: 'dashController'
 	})
-	.when('/lets_play',{
-		templateUrl: 'partials/play.html',
-		controller: 'playController'
-	})	
+	.when('/create',{
+		templateUrl: 'partials/create.html',
+		controller: 'createController'
+	})
+	.when('/poll/:id',{
+		templateUrl: 'partials/poll.html',
+		controller: 'pollController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});

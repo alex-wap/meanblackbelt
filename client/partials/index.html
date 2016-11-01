@@ -1,21 +1,5 @@
-<title>Home</title>
-<a href="#/">Home</a> | <a href="#/new_question">Add a Question</a> | <a ng-click="logout()" href="#/logout">Logout</a><br><br>
-<p ng-if="message">{{message}} Your score is {{score}} ({{percentage}}%).</p>
-<p ng-if="qmessage">{{qmessage}}</p>
-<a href="#/lets_play"><button>Play!</button></a>
-<p>Click the button above to start the trivia game.</p><br><br>
-Search: <input type="text" ng-model="_filter">
-<table>
-	<thead>
-			<th>Name</th>
-			<th>Score</th>
-			<th>Percentage</th>
-	</thead>
-	<tbody>
-		<tr ng-repeat="user in users | orderBy:'percentage':true | filter:_filter">
-			<td>{{ user.user }}</td>
-			<td>{{ user.score }}</td>
-			<td>{{ user.percentage }}%</td>
-		</tr>
-	</tbody>
-</table>
+<title>Login</title>
+<form ng-submit="login()">
+Your Name: <input type="text" ng-model="user" required><br><br>
+<input type="submit" value="Login">
+</form>
